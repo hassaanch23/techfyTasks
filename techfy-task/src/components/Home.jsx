@@ -21,7 +21,7 @@ const Home = () => {
         <div className="home-image">
           <img
             src={lampImage}
-            alt="Lamp and plant"
+            alt="Lamp"
           />
         </div>
       </section>
