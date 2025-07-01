@@ -1,0 +1,51 @@
+.character-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.message-box {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.limit-reached {
+  border-color: red;
+}
+
+.char-count {
+  text-align: right;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.red-text {
+  color: red;
+}
+
+@media (max-width: 500px) {
+  .message-box {
+    font-size: 0.95rem;
+    padding: 8px;
+    min-height: 80px;
+  }
+
+  .char-count {
+    font-size: 0.85rem;
+  }
+
+  .character-container {
+    padding: 15px 10px;
+  }
+}
