@@ -1,10 +1,11 @@
 .home {
   background-color: #f3f4f6;
-  padding: 60px 20px;
+  padding: 60px 20px 80px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   gap: 40px;
+  position: relative;
 }
 
 .home-text {
@@ -13,21 +14,22 @@
 }
 
 .home-text h2 {
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 36px;
+  font-weight: 600;
   margin-bottom: 10px;
+  color: #222;
 }
 
 .home-text h3 {
-  font-size: 20px;
-  color: #6b7280;
+  font-size: 24px;
+  color: #666;
   margin-bottom: 16px;
 }
 
 .home-text p {
-  color: #6b7280;
-  font-size: 14px;
-  line-height: 1.7;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .home-image img {
@@ -35,25 +37,71 @@
   max-width: 100%;
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #94c9a9;
+  cursor: default;
+  user-select: none;
+  z-index: 1;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 20px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #4caf50;
+  width: 28px;
+}
+
 @media (min-width: 768px) {
   .home {
     flex-direction: row;
-    justify-content: space-between;
-    padding: 80px 60px;
+    justify-content: center;
+    padding: 80px 40px;
+    gap: 60px;
   }
 
   .home-text {
     text-align: left;
-    max-width: 50%;
+    max-width: 500px;
   }
 
   .home-image {
-    max-width: 50%;
+    max-width: 400px;
     display: flex;
     justify-content: center;
   }
 
   .home-image img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .slider-dots {
+    position: absolute;
+    bottom: 40px;
   }
 }

@@ -16,13 +16,15 @@ const CharacterCounter = () => {
 
   return (
     <div className="character-container">
-      <h2>Write your Message</h2>
+      <h2 className={isMax ? 'red-text' : ''}>Write your Message</h2>
       <textarea
-        className={`message-box ${isMax ? 'limit-reached' : ''}`}
+        className={`message-box ${isMax ? 'limit-reached red-text' : ''}`}
         placeholder="Start typing ..."
         value={text}
         onChange={handleChange}
       />
+
+
       <div className={`char-count ${isMax ? 'red-text' : ''}`}>
         {text.length} / {MAX_CHARS}
       </div>
